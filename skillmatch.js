@@ -33,5 +33,27 @@ const vagas = [
   new VagaFrontend("StartTech", "Front-End Developer", ["JavaScript", "React", "Git", "TypeScript"])
 ];
 
-console.log(`Perfil de ${candidato.nome} carregado.`);
-console.log(`${vagas.length} vagas cadastradas.`);
+// Simula busca em servidor via API
+function buscarVagasDoServidor() {
+  return new Promise((resolve) => {
+    console.log("Buscando vagas...");
+    setTimeout(() => {
+      resolve(vagas);
+    }, 1500);
+  });
+}
+
+// Execução principal da aplicação
+async function rodarSimulador() {
+  console.log("=== SKILLMATCH JS - ANÁLISE DE VAGAS ===\n");
+
+  const listaVagas = await buscarVagasDoServidor();
+  console.log(`\nAnálise gerada para: ${candidato.nome}`);
+  console.log(`${listaVagas.length} vagas recebidas do servidor.\n`);
+
+  listaVagas.forEach((vaga) => {
+    console.log(vaga.exibirResumo());
+  });
+}
+
+rodarSimulador();
