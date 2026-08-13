@@ -151,4 +151,10 @@ O projeto foi organizado em um quadro Kanban com as colunas *Backlog*, *A Fazer*
 
 ## Vídeo de apresentação
 
-_(link a inserir)_
+_(https://www.loom.com/share/ad5bec83a41740d7bf401457a91d1690)_
+
+## Aplicação rodando
+
+Relatório gerado no terminal integrado do VS Code com o comando `node skillmatch.js`:
+
+![Relatório do SkillMatch JS impresso no terminal](assets/aplicacao-rodando.png)
